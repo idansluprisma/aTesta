@@ -3,5 +3,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "foo" {
-    provider = "aws.eu"
+  provider = "aws.eu"
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

@@ -11,4 +11,7 @@ resource "aws_instance" "foo" {
     command = "two"
     when    = "destroy"
   }
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

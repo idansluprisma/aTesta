@@ -1,5 +1,8 @@
 resource "aws_instance" "A" {
   foo = "bar"
+  tags = {
+    git_org = "idansluprisma"
+  }
 }
 
 module "child" {

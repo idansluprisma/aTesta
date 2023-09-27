@@ -6,4 +6,7 @@ resource "aws_instance" "foo" {
   lifecycle {
     ignore_changes = [ami]
   }
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

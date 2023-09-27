@@ -5,4 +5,7 @@ module "grandchild" {
 resource "aws_instance" "b" {
   ami        = "child"
   depends_on = ["module.grandchild"]
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

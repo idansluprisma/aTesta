@@ -1,7 +1,10 @@
 provider "aws" {
-    alias = "bar"
+  alias = "bar"
 }
 
 resource "aws_instance" "thing" {
-    provider = aws.bar
+  provider = aws.bar
+  tags = {
+    git_org = "idansluprisma"
+  }
 }
