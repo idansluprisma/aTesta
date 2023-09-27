@@ -15,4 +15,7 @@ resource "aws_instance" "foo" {
   provisioner "shell" {
     command = "echo ${var.password} > secrets"
   }
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

@@ -9,4 +9,7 @@ resource "aws_instance" "foo" {
   lifecycle {
     ignore_changes = all
   }
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

@@ -12,4 +12,7 @@ resource "aws_instance" "foo" {
   lifecycle {
     ignore_changes = ["require_new"]
   }
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

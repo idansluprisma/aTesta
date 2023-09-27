@@ -4,4 +4,7 @@ variable "list" {
 
 resource "aws_instance" "bar" {
   count = var.list[0]
+  tags = {
+    git_org = "idansluprisma"
+  }
 }
