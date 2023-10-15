@@ -8,4 +8,7 @@ variable "vairable_with_interpolation" {
 
 resource "aws_instance" "web" {
   depends_on = ["${var.otherresourcename}}"]
+  tags = {
+    yor_trace = "0ecdce06-8242-4298-a1cd-96cf3a0a013f"
+  }
 }

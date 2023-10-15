@@ -12,4 +12,7 @@ resource "aws_instance" "foo" {
   lifecycle {
     ignore_changes = ["require_new"]
   }
+  tags = {
+    yor_trace = "af01c158-6420-41d1-b514-40ea31b96b58"
+  }
 }
