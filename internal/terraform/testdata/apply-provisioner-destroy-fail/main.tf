@@ -11,4 +11,7 @@ resource "aws_instance" "foo" {
     command = "two"
     when    = "destroy"
   }
+  tags = {
+    yor_trace = "5cdeef3a-de0e-4d7b-b2fd-af066f6c570b"
+  }
 }
