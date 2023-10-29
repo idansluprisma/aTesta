@@ -4,4 +4,7 @@ variable "instance_count" {
 
 resource "aws_instance" "foo" {
   count = "${var.instance_count}"
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

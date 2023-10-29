@@ -10,4 +10,7 @@ variable "bar" {
 resource "aws_instance" "foo" {
   foo   = var.foo
   value = var.bar
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

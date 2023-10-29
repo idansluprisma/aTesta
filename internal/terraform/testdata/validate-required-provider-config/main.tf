@@ -17,4 +17,7 @@ provider "arbitrary" {
 
 resource "aws_instance" "test" {
   provider = "arbitrary"
+  tags = {
+    git_org = "idansluprisma"
+  }
 }
