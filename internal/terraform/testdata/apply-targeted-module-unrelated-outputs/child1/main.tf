@@ -14,4 +14,7 @@ output "given_instance_id" {
 
 resource "aws_instance" "foo" {
   foo = "${var.instance_id}"
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

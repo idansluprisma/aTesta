@@ -8,6 +8,9 @@ provider "template" {
 
 resource "aws_instance" "foo" {
 
+  tags = {
+    git_org = "idansluprisma"
+  }
 }
 
 resource "null_resource" "foo" {
