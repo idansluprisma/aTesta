@@ -5,6 +5,9 @@ variable "param" {
 resource "aws_instance" "test" {
   count = "2"
   thing = "doesnt"
+  tags = {
+    git_org = "idansluprisma"
+  }
 }
 
 output "out_from_splat" {

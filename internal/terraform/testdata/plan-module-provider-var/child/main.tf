@@ -1,9 +1,12 @@
 variable "foo" {}
 
 provider "aws" {
-    value = "${var.foo}"
+  value = "${var.foo}"
 }
 
 resource "aws_instance" "test" {
-    value = "hello"
+  value = "hello"
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

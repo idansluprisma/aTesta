@@ -1,11 +1,14 @@
 provider "aws" {
-    value = "${test_instance.bar.value}"
+  value = "${test_instance.bar.value}"
 }
 
 resource "aws_instance" "foo" {
-    bar = "value"
+  bar = "value"
+  tags = {
+    git_org = "idansluprisma"
+  }
 }
 
 resource "test_instance" "bar" {
-    value = "yes"
+  value = "yes"
 }

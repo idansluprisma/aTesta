@@ -1,7 +1,7 @@
 resource "aws_security_group" "firewall" {
   lifecycle {
     create_before_destroy = true
-    prevent_destroy = true
+    prevent_destroy       = true
     ignore_changes = [
       description,
     ]
@@ -22,6 +22,9 @@ resource "aws_security_group" "firewall" {
   provisioner "local-exec" {
     command = "echo hello"
   }
+  tags = {
+    git_org = "idansluprisma"
+  }
 }
 
 resource "aws_instance" "web" {
@@ -33,10 +36,13 @@ resource "aws_instance" "web" {
 
   network_interface {
     device_index = 0
-    description = "Main network interface"
+    description  = "Main network interface"
   }
 
   depends_on = [
     aws_security_group.firewall,
   ]
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

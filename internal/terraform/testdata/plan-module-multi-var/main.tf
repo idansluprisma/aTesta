@@ -1,5 +1,8 @@
 resource "aws_instance" "parent" {
   count = 2
+  tags = {
+    git_org = "idansluprisma"
+  }
 }
 
 module "child" {
