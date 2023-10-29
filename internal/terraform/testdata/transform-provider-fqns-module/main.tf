@@ -8,4 +8,7 @@ terraform {
 
 resource "aws_instance" "web" {
   provider = "my-aws"
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

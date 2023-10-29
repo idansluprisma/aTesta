@@ -1,13 +1,19 @@
 variable "value" {}
 
 resource "aws_instance" "foo" {
-    num = "2"
-    compute = "value"
-    compute_value = "${var.value}"
+  num           = "2"
+  compute       = "value"
+  compute_value = "${var.value}"
+  tags = {
+    git_org = "idansluprisma"
+  }
 }
 
 resource "aws_instance" "bar" {
-    provisioner "shell" {
-        command = "${aws_instance.foo.value}"
-    }
+  provisioner "shell" {
+    command = "${aws_instance.foo.value}"
+  }
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

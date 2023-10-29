@@ -6,4 +6,7 @@ resource "aws_instance" "test" {
   provisioner "shell" {
     test_string = "foo"
   }
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

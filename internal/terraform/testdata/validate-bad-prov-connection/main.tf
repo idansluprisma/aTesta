@@ -5,4 +5,7 @@ resource "aws_instance" "foo" {
       user = "test"
     }
   }
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

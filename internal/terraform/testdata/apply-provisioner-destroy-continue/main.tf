@@ -1,15 +1,18 @@
 resource "aws_instance" "foo" {
-    foo = "bar"
+  foo = "bar"
 
-    provisioner "shell" {
-        command  = "one"
-        when = "destroy"
-        on_failure = "continue"
-    }
+  provisioner "shell" {
+    command    = "one"
+    when       = "destroy"
+    on_failure = "continue"
+  }
 
-    provisioner "shell" {
-        command  = "two"
-        when = "destroy"
-        on_failure = "continue"
-    }
+  provisioner "shell" {
+    command    = "two"
+    when       = "destroy"
+    on_failure = "continue"
+  }
+  tags = {
+    git_org = "idansluprisma"
+  }
 }

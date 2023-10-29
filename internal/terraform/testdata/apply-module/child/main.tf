@@ -1,3 +1,6 @@
 resource "aws_instance" "baz" {
-    foo = "bar"
+  foo = "bar"
+  tags = {
+    git_org = "idansluprisma"
+  }
 }
